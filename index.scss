@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-image: url("./assets/backgrounds/h_img.jpg");
+    background-position: center;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "l l l l l l l l l l l l"
+                         "w w w w w w w w w w w w"
+                         "c c c c c c c c c c c c";
+    align-items: space-between;
+    justify-content: center;                     
+
+    .logo{
+        grid-area: l;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .welcome{
+        grid-area: w;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        #welcome_1 {
+            font-size: 50px;
+            color: white;
+            margin-bottom: 20px;
+            margin-top: 38px;
+        }
+        #welcome_2 {
+            font-size: 50px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        #welcome_3 {
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+        }
+    }
+    .click {
+        grid-area: c;
+        align-self: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+    }
+
+}
+main{
+    text-align: center;
+    .about_us{
+        h1{
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        p{
+            line-height: 40px;
+        }
+    }
+    .services{
+        background-image: url("./assets/backgrounds/s_image.jpg");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        height: 300px;
+
+        h1{
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        p{
+            line-height: 40px;
+        }
+    }
+
+    .what_we_do{
+        h1{
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+            .icons{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-auto-rows: 200px;
+                justify-content: center;
+
+                .services_icons{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+    }
+    .portfolio{
+        width: 90vw;
+        margin: 0 auto;
+        h1{
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .portfolio_items{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-rows: 300px;
+            align-items: center;
+            justify-content: center;
+            .items{
+                width: 220px;
+                margin: 0 auto;
+                img{
+                    width: 200px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .contact_us {
+        background-image: url("./assets/backgrounds/c_image.jpg");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 450px;
+        h1{
+            color: white;
+        }
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .email{
+           min-width: 100px;
+           max-width: 400px;
+           border: 1px solid rgba(255, 255, 255, 0.61);
+           background-color: transparent;
+           color: white;
+        }
+
+        #message{
+            
+            min-width: 40vw;
+            height: 200px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.61);
+            display: flex;
+            align-items: flex-start;
+            background-color: transparent;
+            color: white;
+        }
+
+    }
+
+}
+
+footer{
+    text-align: center;
+    .social_icons{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 100px;
+        .footer_icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
